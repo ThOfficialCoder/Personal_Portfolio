@@ -1,0 +1,75 @@
+/* Reset defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+    background: linear-gradient(135deg, #0d1117 0%, #1c1f26 100%);
+    color: #1e1e1e;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 1rem;
+    color: #e6edf3;
+    position: absolute;
+}
+
+/* Header */
+.header {
+    width: 100%;
+    background: #0d1117; /* GitHub dark-style */
+    padding: 1rem 3rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+/* Navigation */
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+/* Nav links */
+.nav-list a {
+    text-decoration: none;
+    color: #e6edf3; /* light gray text */
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 4px;
+}
+
+/* Hover + Active effect */
+.nav-list a:hover,
+.nav-list a:focus {
+    color: #58a6ff; /* GitHub blue */
+    border-bottom: 2px solid #58a6ff;
+}
+
+/* Add subtle animation */
+.nav-list a {
+    position: relative;
+}
+.nav-list a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: #58a6ff;
+    transition: width 0.3s ease;
+}
+.nav-list a:hover::after {
+    width: 100%;
+}
